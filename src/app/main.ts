@@ -20,6 +20,10 @@ import ListaMaiorConsumo from "../negocio/consumo/listarMaiorConsumo";
 import ListaMenorConsumo from "../negocio/consumo/listarMenorConsumo";
 import ProdMaisConsumido from "../negocio/consumo/prodMaisConsumido";
 import ListarServMais from "../negocio/consumo/listarServMais";
+import CadastroTelefone from "../negocio/telefone/cadastroTelefone";
+import AlteraTelefone from "../negocio/telefone/alterarTelefone";
+import DeletarTelefone from "../negocio/telefone/deletarTelefone";
+import listarTelefone from "../negocio/telefone/listagemTelefone";
 
 console.log(`\n##### Bem-vindo ao cadastro de clientes do Grupo World Beauty #####`)
 let empresa = new Empresa()
@@ -37,20 +41,25 @@ while (execucao) {
     console.log(`7 -  Excluir produto`);
     console.log(`8 -  Listar todos os produtos`);
     console.log("");
-    console.log(`9 -  Cadastrar serviços`);
+    console.log(`9  - Cadastrar serviços`);
     console.log(`10 - Editar Serviços: `);
     console.log(`11 - Excluir Serviço: `);
     console.log(`12 - Listar todos os serviços:`);
     console.log("");
-    console.log(`13 - Adicionar Serviços/Produtos: `);
-    console.log(`13 - Editar Produtos: `);
-    console.log(`14 - Listar clientes por gênero: `);
-    console.log(`15 - Listar 5 clientes que mais consumiram em valor: `);
-    console.log(`16 - Listar consumo por gênero: `);
-    console.log(`17 - Listar 10 clientes que mais consumiram em quantidade: `);
-    console.log(`18 - Listar 10 clientes que menos consumiram em quantidade: `);
-    console.log(`19 - Listar produto mais consumido: `);
-    console.log(`20 - Listar serviço mais consumido: `);
+    console.log(`13 - Cadastrar Telefone:`); 
+    console.log(`14 - Editar Telefone:`); 
+    console.log(`15 - Excluir Serviço:`); 
+    console.log(`16 - Listar todos os Telefones:`); 
+    console.log("");
+    console.log(`17 - Adicionar Serviços/Produtos: `);
+    console.log(`18 - Listar clientes por gênero: `);
+    console.log(`19 - Listar 5 clientes que mais consumiram em valor: `);
+    console.log(`20 - Listar consumo por gênero: `);
+    console.log(`21 - Listar 10 clientes que mais consumiram em quantidade: `);
+    console.log(`22 - Listar 10 clientes que menos consumiram em quantidade: `);
+    console.log(`23 - Listar produto mais consumido: `);
+    console.log(`24 - Listar serviço mais consumido: `);
+    
 
     console.log(`0 - Sair`);
 
@@ -91,9 +100,9 @@ while (execucao) {
             listagemProd.listar()
             break;
         case 9:
-                let servico = new CadastroServico(empresa.getServicos)
-                servico.cadastrar()
-                break;
+            let servico = new CadastroServico(empresa.getServicos)
+            servico.cadastrar()
+            break;
         case 10:
             let editarServico = new AlterarServico(empresa.getServicos)
             editarServico.alterar();
@@ -107,34 +116,50 @@ while (execucao) {
             listagemServico.listar()
             break;
         case 13:
+            let telefone = new CadastroTelefone(empresa.getClientes)
+            telefone.cadastrar();
+            break;
+        case 14:
+            let alterarTelefone = new AlteraTelefone(empresa.getClientes)
+            alterarTelefone.alterar();
+            break;
+        case 15:
+            let deletarTelefone = new DeletarTelefone(empresa.getClientes)
+            deletarTelefone.deletar();
+            break;
+        case 16:
+            let listagemTelefone = new listarTelefone(empresa.getClientes)
+            listagemTelefone.listar();
+            break;
+        case 17:
             let consumoCliente = new ConsumoCliente(empresa)
             consumoCliente.cadastrar();
             break;
-        case 14:
+        case 18:
             let listarGenero = new ListagemGenero(empresa.getClientes)
             listarGenero.listar();
             break;
-        case 15:
+        case 19:
             let listar5Mais = new Listar5MaisConsumo(empresa.getClientes)
             listar5Mais.listar();
             break;
-        case 16:
+        case 20:
             let listarConsumoGen = new ListarConsumoGen(empresa.getClientes)
             listarConsumoGen.listar();
             break;
-        case 17:
+        case 21:
             let listar10Mais = new ListaMaiorConsumo(empresa.getClientes)
             listar10Mais.listar();
             break;
-        case 18:
+        case 22:
             let listar10Menos = new ListaMenorConsumo(empresa.getClientes)
             listar10Menos.listar();
             break;
-        case 19:
+        case 23:
             let listarProdMais = new ProdMaisConsumido(empresa.getClientes)
             listarProdMais.listar();
             break;
-        case 20:
+        case 24:
             let listarServMais = new ListarServMais(empresa.getClientes)
             listarServMais.listar();
             break;

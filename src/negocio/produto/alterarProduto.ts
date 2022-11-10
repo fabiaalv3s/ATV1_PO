@@ -19,6 +19,7 @@ export default class alterarProduto extends Alterar{
         
         let nome = this.entrada.receberTexto(`Informe o nome do produto: `)
         let indice = this.produtos.findIndex( i => i.nome === nome);
+        
         while (indice == -1) {
             nome = this.entrada.receberTexto(`Informe novamente o nome do produto: `)
             indice = this.produtos.findIndex( i => i.nome === nome);

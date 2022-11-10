@@ -7,6 +7,7 @@ import Telefone from "../../modelo/telefone";
 export default class AlterarCliente extends Alterar {
     private clientes: Array<Cliente>
     private entrada: Entrada
+    
     constructor(clientes: Array<Cliente>) {
         super()
         this.clientes = clientes

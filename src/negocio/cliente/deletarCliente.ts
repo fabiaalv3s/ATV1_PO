@@ -19,7 +19,7 @@ export default class DeletarCliente extends Deletar{
 
         let cpf = entrada.receberTexto("Informar o CPF do cliente que deseja excluir: ");
         let indice = this.clientes.findIndex( i => i.getCpf.getValor === cpf);
-        this.clientes.splice(indice,1);
+        this.clientes.splice(indice);
         return;
     }
 

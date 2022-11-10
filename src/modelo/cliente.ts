@@ -14,6 +14,7 @@ export default class Cliente {
     private telefones: Array<Telefone>
     private produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
+    static telefone: Telefone
 
     constructor(nome: string, nomeSocial: string, cpf: CPF, genero:string) {
         this.nome = nome
@@ -45,6 +46,11 @@ export default class Cliente {
         return this.servicosConsumidos
 
     }
+
+    public addTelefone(telefone: Telefone){
+        this.telefones.push(telefone)
+    }
+
     public addServicos(servico?: Servico): void {
         if (!servico) {
             console.log("Serviço não Encontrado!");
