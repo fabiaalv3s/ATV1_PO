@@ -1,5 +1,5 @@
 
-                                              FATEC Profº Jessen Vidal, SJC - 3º Semestre ADS
+                                        FATEC Profº Jessen Vidal, SJC - 3º Semestre ADS
 
 <h2> 📑 Atividade 1 - Programação Orientada a Objeto </h2>
 <p>
