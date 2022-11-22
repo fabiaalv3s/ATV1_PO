@@ -1,7 +1,7 @@
 
                                         FATEC Profº Jessen Vidal, SJC - 3º Semestre ADS
 
-<h2> 📑 Atividade 1 - Programação Orientada a Objeto </h2>
+<h2> Atividade 1 - Programação Orientada a Objeto </h2>
 <p>
 O trabalho da sua empresa é desenvolver uma agenda de clientes para o grupo WB. Esta agenda, inicialmente, será  um  sistema  do  tipo  cli  (command-line  interface),  ou  seja,  deverá  funcionar  sem  uma  interface  gráfica muito elaborada, apenas pela linha de comando. Além disso, cada unidade terá sua própria agenda, os dados não serão compartilhados entre as unidades do grupo WB.
 
@@ -12,7 +12,7 @@ A agenda deverá ter as seguintes funcionalidadesde cadastro:
 </p>
    
   
-<h2> ⛏️ Para executar </h2>
+<h2> Executando </h2>
   
 - Faça o clone do repositório:
 ```
