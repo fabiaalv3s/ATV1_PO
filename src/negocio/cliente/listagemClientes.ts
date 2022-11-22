@@ -3,6 +3,9 @@ import Listagem from "../listagem";
 import Telefone from "../../modelo/telefone";
 
 export default class ListagemClientes extends Listagem {
+    validar(): Cliente {
+        throw new Error("Method not implemented.");
+    }
     private clientes: Array<Cliente>
     constructor(clientes: Array<Cliente>) {
         super()

@@ -5,6 +5,9 @@ import Servico from "./servico"
 import Telefone from "./telefone"
 
 export default class Cliente {
+    deletarRg(indice: number) {
+        throw new Error("Method not implemented.")
+    }
     public nome: string
     public nomeSocial: string
     private cpf: CPF
@@ -49,6 +52,10 @@ export default class Cliente {
 
     public addTelefone(telefone: Telefone){
         this.telefones.push(telefone)
+    }
+
+    public addRg (rg: RG){
+        this.rgs.push(rg)
     }
 
     public addServicos(servico?: Servico): void {
